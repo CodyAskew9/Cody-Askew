@@ -1,0 +1,8 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../../assets/Home/bg2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}

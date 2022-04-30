@@ -1,5 +1,6 @@
 import React from "react";
 import Typical from "react-typical";
+import "./Profile.css"
 
 export default function Profile() {
   return (
@@ -7,6 +8,8 @@ export default function Profile() {
       <div className="profile-parent">
         <div className="profile-details">
           <div className="colz">
+              <div className="colz-icon">
+
             <a href="https://github.com/CodyAskew9">
               <i className="fa fa-github-square"></i>
             </a>
@@ -22,6 +25,7 @@ export default function Profile() {
             <a href="#">
               <i className="fa fa-twitter"></i>
             </a>
+              </div>
           </div>
           <div className="profile-details-name">
               <span className="primary-text">
@@ -33,7 +37,7 @@ export default function Profile() {
               <span className="primary-text">
                   {""}
                   <h1>
-                      {""}
+                      {" "}
                       <Typical loop={Infinity}
                       steps={[
                           "Ambitious Dev 📈",
@@ -47,19 +51,24 @@ export default function Profile() {
                       ]} />
                   </h1>
                   <span className="profile-role-tagline">
-                      Passionate about education and youth development in coding.
+                      Passionate about education and development in coding.
                   </span>
               </span>
           </div>
           <div className="profile-options">
               <button className="btn primary-btn">
                   {""}
-                  hire me{" "}
+                  Hire me{" "}
               </button>
               <a href="resume.PDF" download="resume.PDF">
                   <button className="btn highlighted-btn">Get Resume</button>
               </a>
           </div>
+        </div>
+        <div className="profile-picture">
+            <div className="profile-picture-background">
+
+            </div>
         </div>
       </div>
     </div>
