@@ -1,0 +1,40 @@
+.header-contain{
+    display: flex;
+    justify-content: center;
+    height: 140px;
+    color: white;
+}
+.header-parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 70%;
+    color: white;
+}
+.header-logo{
+    font-size: 50px;
+    font-family: "Poppins ExtraBold";
+    color: white;
+}
+.header-options {
+    display: flex;
+    align-items: center;
+}
+.header-option{
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.header-hamburger{
+    display: none;
+    color: white;
+
+}
+header-option-seperator{
+    margin: 0 50px 0 0;
+    color: white;
+}
+.selected-header-option{
+    color: #ff5823;
+}
