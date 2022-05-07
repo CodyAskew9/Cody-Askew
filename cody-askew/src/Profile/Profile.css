@@ -51,7 +51,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 1px 0 0 var(--white);
-    border-radius: 50%;
+    border-radius: 50%/50%;
     height: 380px;
     width: 380px;
     margin: 0 0px 0 100px;
@@ -61,7 +61,7 @@
     width: 92%;
     background-image: url(../assets/Home/me3.jpg);
     background-size: cover;
-    border-radius: 100%;
+    border-radius: 50%/50%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -79,7 +79,7 @@
 }
 @media screen and (max-width: 1000px) {
     .profile-picture {
-        margin: 0 0 0 80;
+        margin: 0 0 0 80px;
     
     }
     .profile-details-name {
@@ -127,8 +127,8 @@
 @media screen and (max-width: 3750px) {
     .profile-picture {
         height: 275px;
-        width: 275px;
-        margin-top: -90px;
+        width: 325px;
+        margin-top: -40px;
     }
     .profile-details {
         width: 90%;
