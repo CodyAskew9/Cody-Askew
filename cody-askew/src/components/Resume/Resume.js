@@ -27,9 +27,74 @@ export default function Resume(props) {
                         {props.subheading ? props.subHeading : ''}
                     </span>
                 </div>
+                <div className='resume-heading-description'>
+                    <span>{props.description ? props.description : ""}</span>
+                </div>
             </div>
         </div>
     }
+
+    const resumeBullets = [
+        {lable:'Education', logoSrc: "education.svg"},
+        {lable: "Work History", logoSrc: "work-history.svg"},
+        {lable: "Programming Skills", logoSrc:"programming-skill.svg"},
+        {lable: "Projects", logoSrc: "projects.svg"},
+        {lable: "Interests", logoSrc: "interests.svg"},
+    ];
+
+const programmingSkillDetails = [
+    {skill: "JavaScript", ratingPercentage: 70},
+    {skill: "ReactJS", ratingPercentage: 85},
+    {skill: "Express", ratingPercentage: 70},
+    {skill: "Node", ratingPercentage: 75},
+    {skill: "MongoDB", ratingPercentage: 80},
+    {skill: "SQL", ratingPercentage: 80},
+    {skill: "REST", ratingPercentage: 85},
+    {skill: "HTML", ratingPercentage: 85},
+    {skill: "CSS", ratingPercentage: 85},
+];
+
+const projectsDetails =[
+    {title:"Cody-Askew",
+    duration: { fromDate: 2022, toDate:"Present" },
+    description: "A Personal Portfolio Website",
+    subHeading: "Technologies Used: React JS, Bootstrap"
+
+},
+    {title:"Cody-Askew",
+    duration: { fromDate: 2022, toDate:"Present" },
+    description: "A Personal Portfolio Website",
+    subHeading: "Technologies Used: React JS, Bootstrap"
+
+},
+    {title:"Cody-Askew",
+    duration: { fromDate: 2022, toDate:"Present" },
+    description: "A Personal Portfolio Website",
+    subHeading: "Technologies Used: React JS, Bootstrap"
+
+},
+];
+
+const resumeDetails = [
+    <div className='resume-screen-container' key="education">
+        <ResumeHeading 
+        heading={"Bloom Institute For Technology"}
+        subHeading={"Certificate of Completion Full Stack Web Development"}
+        fromDate={"2021"}
+        toDate={"2022"}
+        />
+    </div>,
+    <div className='resume-screen-container' key="work-experience">
+        <ResumeHeading 
+        heading={"Albuquerque NFC"}
+        subHeading={"Owner Operator"}
+        fromDate={"2017"}
+        toDate={"2022"}
+        />
+    </div>
+    
+]
+
 
     let fadeInScreenHandler = (screen) => {
         if (screen.fadeScreen !== props.id) return;
