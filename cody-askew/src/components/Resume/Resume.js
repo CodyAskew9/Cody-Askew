@@ -91,6 +91,53 @@ const resumeDetails = [
         fromDate={"2017"}
         toDate={"2022"}
         />
+        <div className='experience-description'>
+            <span className='resume-description-text'>
+                I am the owner of a small business selling and programming Near Field Communication products
+            </span>
+        </div>,
+        <div className='resume-screen-container programming-skills-container' key="programming-skills">
+            {programmingSkillDetails.map((skill, index) =>(
+                <div className="skill-parent" key={index}>
+                    <div className='heading-bullet'></div>
+                    <span>{skill.skill}</span>
+                    <div className='skill-percentage'>
+                        <div style={{width: skill.ratingPercentage + "%"}} className="active-percentage">
+                            </div>
+                        </div>
+                 </div>
+            ))}
+        </div>,
+
+        <div className='resume-screen-container' key="projects">
+            {projectsDetails.map((projectsDetails, index)=> (
+                <ResumeHeading
+                key={index}
+                heading={projectsDetails.title}
+                subHeading={projectsDetails.subHeading}
+                description={projectsDetails.description}
+                fromDate={projectsDetails.duration.fromDate}
+                toDate={projectsDetails.duration.toDate}
+                />
+            ))}
+        </div>,
+
+        <div className='resume-screen-container' key="interest">
+        <ResumeHeading
+                heading="Teaching"
+                subHeading="I have a dream to start a after school program to help teach young people coding and computer skills."
+                />
+        <ResumeHeading
+                heading="Teaching"
+                subHeading="I have a dream to start a after school program to help teach young people coding and computer skills."
+                />
+        <ResumeHeading
+                heading="Teaching"
+                subHeading="I have a dream to start a after school program to help teach young people coding and computer skills."
+                />
+
+        </div>
+        
     </div>
     
 ]
