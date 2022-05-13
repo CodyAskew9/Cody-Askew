@@ -45,11 +45,11 @@ export default function Resume(props) {
     }
 
     const resumeBullets = [
-        {lable:'Education', logoSrc: "education.svg"},
-        {lable: "Work History", logoSrc: "work-history.svg"},
-        {lable: "Programming Skills", logoSrc:"projects.svg"},
-        {lable: "Projects", logoSrc: "projects.svg"},
-        {lable: "Interests", logoSrc: "interests.svg"},
+        {label:'Education', logoSrc: "education.png"},
+        {label: "Work History", logoSrc: "work-history.png"},
+        {label: "Programming Skills", logoSrc:"programming.png"},
+        {label: "Projects", logoSrc: "interests.png"},
+        {label: "Interests", logoSrc: "interests.png"},
     ];
 
 const programmingSkillDetails = [
@@ -155,7 +155,7 @@ const resumeDetails = [
 const handleCarousal = (index) => {
     let offsetHeight = 360;
     let newCarousalOffset = {
-        style: {transform: "translateY("+index * offsetHeight -1 +"px)"}
+        style: {transform: "translateY(" + index * offsetHeight * -1 +"px)"}
     };
     setCarousalOffSetStyle(newCarousalOffset)
     setSelectedBulletIndex(index)
@@ -165,8 +165,8 @@ const getBullets = () => {
     return resumeBullets.map((bullet, index) =>(
         <div onClick={ () => handleCarousal(index)} className={index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"}
         key={index}>
-            <img className='bullet-logo' src={require (`../../assets/Resume/${bullet.logoSrc}` 
-          ).default} 
+            <img className='bullet-logo' src={require(`../../assets/Resume/${bullet.logoSrc}` 
+          )} 
           alt='no internet connection'/>
         </div>
     ))

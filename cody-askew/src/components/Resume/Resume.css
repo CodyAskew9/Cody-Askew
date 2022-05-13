@@ -23,3 +23,11 @@
     overflow: hidden;
     padding: 0 0 0 70px;
 }
+.experience-description{
+    margin: 10px 0 0 0;
+    text-align: justify;
+    max-width: 100%;
+}
+.resume-details-carousal{
+
+}
