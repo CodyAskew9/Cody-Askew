@@ -18,14 +18,13 @@ export default function Resume(props) {
 
     const ResumeHeading = (props) => {
         return(
-            
-        <div className='resume-heading'>
-            <div className='resume-main-heading'>
-                <div className='heading-bullet'>
-                    <span>{props.heading ? props.heading : ""}</span>
-                    {props.fromDate && props.toDate ? (
-                        <div className='heading-date'>
-                            {props.fromDate + "_" + props.toDate}
+               <div className='resume-heading'>
+                   <div className='resume-main-heading'>
+                       <div className='heading-bullet'>
+                           <span>{props.heading ? props.heading : " "}</span>
+                           {props.fromDate && props.toDate ? (
+                             <div className='heading-date'>
+                             {props.fromDate + "_" + props.toDate}
                             </div>
                     ) : (
                         <div></div>
@@ -33,11 +32,11 @@ export default function Resume(props) {
                 </div>
                 <div className='resume-sub-heading'>
                     <span>
-                        {props.subheading ? props.subHeading : ''}
+                        {props.subHeading ? props.subHeading : " "}
                     </span>
-                </div>
-                <div className='resume-heading-description'>
-                    <span>{props.description ? props.description : ""}</span>
+                 </div>
+                 <div className='resume-heading-description'>
+                    <span>{props.description ? props.description : " "}</span>
                 </div>
             </div>
         </div>
@@ -45,11 +44,11 @@ export default function Resume(props) {
     }
 
     const resumeBullets = [
-        {label:'Education', logoSrc: "education.png"},
-        {label: "Work History", logoSrc: "work-history.png"},
-        {label: "Programming Skills", logoSrc:"programming.png"},
-        {label: "Projects", logoSrc: "interests.png"},
-        {label: "Interests", logoSrc: "interests.png"},
+        {label: "Education", logoSrc: "education.svg"},
+        {label: "Work Experience", logoSrc: "work-history.svg"},
+        {label: "Programming Skills", logoSrc:"programming.svg"},
+        {label: "Projects", logoSrc: "projects.svg"},
+        {label: "Interests", logoSrc: "interests.svg"},
     ];
 
 const programmingSkillDetails = [
@@ -101,16 +100,31 @@ const resumeDetails = [
         fromDate={"2017"}
         toDate={"2022"}
         />
+        <ResumeHeading 
+        heading={"Albuquerque NFC"}
+        subHeading={"Owner Operator"}
+        fromDate={"2017"}
+        toDate={"2022"}
+        />
+        <ResumeHeading 
+        heading={"Albuquerque NFC"}
+        subHeading={"Owner Operator"}
+        fromDate={"2017"}
+        toDate={"2022"}
+        />
         <div className='experience-description'>
             <span className='resume-description-text'>
                 I am the owner of a small business selling and programming Near Field Communication products
             </span>
+            <br/>
         </div>,
         <div className='resume-screen-container programming-skills-container' key="programming-skills">
             {programmingSkillDetails.map((skill, index) =>(
                 <div className="skill-parent" key={index}>
-                    <div className='heading-bullet'></div>
-                    <span>{skill.skill}</span>
+                    <div className='heading-bullet'>
+
+                    </div>
+                      <span>{skill.skill}</span>
                     <div className='skill-percentage'>
                         <div style={{width: skill.ratingPercentage + "%"}} className="active-percentage">
                             </div>
@@ -162,21 +176,24 @@ const handleCarousal = (index) => {
 };
 
 const getBullets = () => {
-    return resumeBullets.map((bullet, index) =>(
-        <div onClick={ () => handleCarousal(index)} className={index === selectedBulletIndex ? "bullet selected-bullet" : "bullet"}
-        key={index}>
-            <img className='bullet-logo' src={require(`../../assets/Resume/${bullet.logoSrc}` 
-          )} 
-          alt='no internet connection'/>
-        </div>
-    ))
+    return resumeBullets.map((bullet, index) =>{
+        return (
+            <div onClick={() => handleCarousal(index)} className={index=== selectedBulletIndex ? "bullet selected-bullet" : "bullet"}
+                key={index}>
+                <img className='bullet-logo' src={require(`../../assets/Resume/${bullet.logoSrc}`
+                )}
+                    alt='no internet connection' />
+                    <span className='bullet-label'>{bullet.label}</span>
+            </div>
+        )
+    })
 }
    
 const getResumeScreens = () => {
     return(
         <div style={carousalOffSetStyle.style}
         className='resume-detail-carousal'>
-            {resumeDetails.map((ResumeDetails) => ResumeDetails)}
+            {resumeDetails.map((resumeDetails) => resumeDetails)}
 
         </div>
     )
