@@ -20,8 +20,9 @@ export default function Resume(props) {
         return(
                <div className='resume-heading'>
                    <div className='resume-main-heading'>
-                       <div className='heading-bullet'>
-                           <span>{props.heading ? props.heading : " "}</span>
+                       <div className='heading-bullet'></div>
+                       <div>
+                           <span>{props.heading ? props.heading : ''}</span>
                            {props.fromDate && props.toDate ? (
                              <div className='heading-date'>
                              {props.fromDate + "_" + props.toDate}
@@ -36,7 +37,7 @@ export default function Resume(props) {
                     </span>
                  </div>
                  <div className='resume-heading-description'>
-                    <span>{props.description ? props.description : " "}</span>
+                    <span>{props.description ? props.description : ""}</span>
                 </div>
             </div>
         </div>
@@ -64,16 +65,16 @@ const programmingSkillDetails = [
 ];
 
 const projectsDetails =[
-    {title:"Cody-Askew",
+    {title:"Class Store",
     duration: { fromDate: 2022, toDate:"Present" },
-    description: "A Personal Portfolio Website",
-    subHeading: "Technologies Used: React JS, Bootstrap"
+    description: "A Amazon clone used by a third grade teacher to teach her students about the use of money",
+    subHeading: "Technologies Used: React JS, Redux, MangoDB, Node, Express"
 
 },
-    {title:"Cody-Askew",
+    {title:"Keyless Remotes 4less",
     duration: { fromDate: 2022, toDate:"Present" },
-    description: "A Personal Portfolio Website",
-    subHeading: "Technologies Used: React JS, Bootstrap"
+    description: "A E-commerce site built for a friends small business",
+    subHeading: "Technologies Used: React JS, Bootstrap, MangoDb, Node, Express"
 
 },
     {title:"Cody-Askew",
@@ -100,31 +101,38 @@ const resumeDetails = [
         fromDate={"2017"}
         toDate={"2022"}
         />
-        <ResumeHeading 
-        heading={"Albuquerque NFC"}
-        subHeading={"Owner Operator"}
-        fromDate={"2017"}
-        toDate={"2022"}
-        />
-        <ResumeHeading 
-        heading={"Albuquerque NFC"}
-        subHeading={"Owner Operator"}
-        fromDate={"2017"}
-        toDate={"2022"}
-        />
         <div className='experience-description'>
             <span className='resume-description-text'>
                 I am the owner of a small business selling and programming Near Field Communication products
             </span>
             <br/>
+        <ResumeHeading 
+        heading={"Albuquerque NFC"}
+        subHeading={"Owner Operator"}
+        fromDate={"2017"}
+        toDate={"2022"}
+        />
+            <span className='resume-description-text'>
+                I am the owner of a small business selling and programming Near Field Communication products
+            </span>
+            <br/>
+        <ResumeHeading 
+        heading={"Albuquerque NFC"}
+        subHeading={"Owner Operator"}
+        fromDate={"2017"}
+        toDate={"2022"}
+        />
+            <span className='resume-description-text'>
+                I am the owner of a small business selling and programming Near Field Communication products
+            </span>
+            </div>
         </div>,
+
         <div className='resume-screen-container programming-skills-container' key="programming-skills">
             {programmingSkillDetails.map((skill, index) =>(
                 <div className="skill-parent" key={index}>
-                    <div className='heading-bullet'>
-
-                    </div>
-                      <span>{skill.skill}</span>
+                    <div className='heading-bullet'></div>
+                      <span>{skill.skill}</span> 
                     <div className='skill-percentage'>
                         <div style={{width: skill.ratingPercentage + "%"}} className="active-percentage">
                             </div>
@@ -152,18 +160,14 @@ const resumeDetails = [
                 subHeading="I have a dream to start a after school program to help teach young people coding and computer skills."
                 />
         <ResumeHeading
-                heading="Teaching"
-                subHeading="I have a dream to start a after school program to help teach young people coding and computer skills."
+                heading="Tech"
+                subHeading="I love new and interesting tech. I have smart rings watches a NFC chip in my hand if it is new futuristic tech I am into it."
                 />
         <ResumeHeading
-                heading="Teaching"
-                subHeading="I have a dream to start a after school program to help teach young people coding and computer skills."
+                heading="Gaming"
+                subHeading="I started playing video games at a young age. As someone with a bleeding disorder I wasn't allowed to go outside and play like other kids the risks were too high so games were my escape"
                 />
-
-        </div>
-        
     </div>
-    
 ];
 
 const handleCarousal = (index) => {
