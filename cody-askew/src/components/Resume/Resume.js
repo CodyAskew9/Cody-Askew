@@ -107,23 +107,24 @@ const resumeDetails = [
             </span>
             <br/>
         <ResumeHeading 
-        heading={"Albuquerque NFC"}
-        subHeading={"Owner Operator"}
-        fromDate={"2017"}
-        toDate={"2022"}
+        heading={"Vintage Motors"}
+        subHeading={"Finance Manager"}
+        fromDate={"2016"}
+        toDate={"2017"}
         />
             <span className='resume-description-text'>
-                I am the owner of a small business selling and programming Near Field Communication products
+            Identified and capitalized on community business opportunities through  effective networking to establish lines of business and financing to establish vintage auto dealership
             </span>
             <br/>
         <ResumeHeading 
-        heading={"Albuquerque NFC"}
-        subHeading={"Owner Operator"}
-        fromDate={"2017"}
-        toDate={"2022"}
+        heading={"VerVarious Auto Dealerships"}
+        subHeading={"Internet Sales"}
+        fromDate={"2012"}
+        toDate={"2015"}
         />
             <span className='resume-description-text'>
-                I am the owner of a small business selling and programming Near Field Communication products
+            Coached sales associates in product specifications, sales incentives and selling techniques, significantly increasing customer satisfaction ratings
+Responded to internet inquiries and phone calls in a timely manner
             </span>
             </div>
         </div>,

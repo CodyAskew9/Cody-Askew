@@ -41,8 +41,7 @@ export default class ScrollService {
     }
   };
   checkCurrentScreenUnderViewport = (event) => {
-    // eslint-disable-next-line no-undef
-    if (!event || object.keys(event).length < 1) return;
+    // eslint-disable-next-line no-undef if (!event || object.keys(event).length < 1) return;
     for (let screen of TOTAL_SCREENS) {
       let screenFromDom = document.getElementById(screen.screen_name);
       if (!screenFromDom) continue;
