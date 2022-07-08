@@ -33,7 +33,7 @@ export default function Header() {
     const getHeaderOptionsClass = (index) => {
         let classes = "header-options";
         if(index < TOTAL_SCREENS.length -1)
-        classes += "header-option-seperator";
+        classes += "header-option-separator";
 
         if(selectedScreen === index)
         classes += "selected-header-option"
