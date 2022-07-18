@@ -4,7 +4,7 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 import ScreenHeading from "../../utilitys/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utilitys/ScrollService";
+import ScrollService from "../../utilitys/scrollService";
 import Animations from "../../utilitys/Animations";
 import "./Testimonial.css";
 import lady from "../../../src/img/Testimonial/lady.png";

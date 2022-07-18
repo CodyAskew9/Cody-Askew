@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Typical from "react-typical";
 import axios from "axios";
-import { toast } from "react-toastify";
+
 
 import imgBack from "../../../src/images/mailz.jpeg";
 import load1 from "../../../src/images/load2.gif";
 import ScreenHeading from "../../utilitys/ScreenHeading/ScreenHeading";
-import ScrollService from "../../utilitys/ScrollService";
+import ScrollService from "../../utilitys/scrollService";
 import Animations from "../../utilitys/Animations";
-import Footer from "../../components/footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import "./ContactMe.css";
 
 export default function ContactMe(props) {
@@ -48,11 +48,9 @@ export default function ContactMe(props) {
       const res = await axios.post(`/contact`, data);
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
-        toast.error(res.data.msg);
         setBool(false);
       } else if (res.status === 200) {
         setBanner(res.data.msg);
-        toast.success(res.data.msg);
         setBool(false);
 
         setName("");
