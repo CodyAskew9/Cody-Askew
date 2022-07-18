@@ -24,7 +24,7 @@
     padding: 0 0 0 70px;
 }
 .experience-description{
-    margin: 10px 0 0 0;
+    margin: 10px 0;
     text-align: justify;
     max-width: 100%;
 }
@@ -159,7 +159,7 @@
     }
 }
 @media only screen and (max-width: 1023px){
-    .resume-content{
+    .resume-screen-container{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -189,8 +189,6 @@
         width: 100%;
         
     }
-
-}
-@media only screen and (max-width: 1023px){
     
+
 }
