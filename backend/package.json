@@ -8,7 +8,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix cody-askew",
     "dev": "concurrently \"npm run  server\" \"npm run cody-askew\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix cody-askew && npm run build--prefix cody-askew"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix backend && npm run build--prefix backend"
   },
   "author": "",
   "license": "ISC",
