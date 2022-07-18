@@ -53,7 +53,8 @@ export default function AboutMe(props) {
                 {renderHighlights()}
               </div>
               <div className="about-me-options">
-                <button className="btn primary-btn">
+                <button className="btn primary-btn" onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+>
                   {""}
                   Hire me{" "}
                 </button>

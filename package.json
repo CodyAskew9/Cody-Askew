@@ -2,5 +2,24 @@
   "dependencies": {
     "axios": "^0.27.2",
     "react-toastify": "^9.0.3"
-  }
+  },
+  "name": "cody-askew",
+  
+  "description": "A portfolio app all about ME",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodyAskew9/cody-askew.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodyAskew9/cody-askew/issues"
+  },
+  "homepage": "https://github.com/CodyAskew9/cody-askew#readme"
 }

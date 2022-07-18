@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix cody-askew",
+    "dev": "concurrently \"npm run  server\" \"npm run cody-askew\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix cody-askew && npm run build--prefix cody-askew"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "nodemailer": "^6.7.7",
+    "nodemon": "^2.0.19"
+  }
+}
