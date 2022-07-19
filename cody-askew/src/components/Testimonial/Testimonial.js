@@ -7,11 +7,11 @@ import ScreenHeading from "../../utilitys/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilitys/scrollService";
 import Animations from "../../utilitys/Animations";
 import "./Testimonial.css";
-import lady from "../../../src/img/Testimonial/lady.png";
+import leihzel from "../../../src/img/Testimonial/leihzel.jpg";
 import mike from "../../../src/img/Testimonial/mike.png";
 import man from "../../../src/img/Testimonial/man.png";
 import shape from "../../../src/img/Testimonial/shape-bg.png";
-
+import daisy from "../../../src/img/Testimonial/daisy.jpg"
 export default function Testimonial(props) {
   let fadeInScreenHandler = (screen) => {
     if (screen.fadeInScreen !== props.id) return;
@@ -62,9 +62,7 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I patronized Cody and when He delivered, I honestly
-                      fell in love with the project He is a very honest guy and
-                      he delivers ontime.
+                      Cody created two apps for my classroom use, one of which is an app to streamline my library checkout system. I am amazed at how much easier I'm able to check out books to my students and keep track of which books come in and out of my library. Thank you, Cody, for your amazing work!
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -86,9 +84,9 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img src={lady} alt="no internet connection"></img>
-                    <h5>Daisy Dominic</h5>
-                    <p>CEO InansGlobal</p>
+                    <img src={leihzel} alt="no internet connection"></img>
+                    <h5>Leihzel Baybayan</h5>
+                    <p>Third Grade Teacher</p>
                   </div>
                 </div>
               </div>
@@ -98,9 +96,7 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      It was nice hiring this guy for my e-commerce project.He
-                      delivered even more than i can imagine. I recommend him
-                      for you.
+                      
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -157,7 +153,7 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img src={lady} alt="no internet connection"></img>
+                    <img src={daisy} alt="no internet connection"></img>
                     <h5>Daisy Dominic</h5>
                     <p>CEO InansGlobal</p>
                   </div>
