@@ -81,7 +81,7 @@ export default function ContactMe(props) {
           <a href="">
             <i className="fa fa-youtube-square" />
           </a>
-          <a href="https://twitter.com/Ehiedu_baba">
+          <a href="">
             <i className="fa fa-twitter" />
           </a>
         </div>
