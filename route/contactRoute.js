@@ -11,20 +11,21 @@ router.post("/contact", (req, res) => {
     return res.json({ msg: "Please Fill All The Fields!" });
   }
 
-  let smtpTransporter = nodemailer.createTransport({
+  let Transporter = nodemailer.createTransport({
     service: "Gmail",
-    port: 465,
+    port: 587,
     auth: {
       user: "codyaskew9@gmail.com",
       pass: "zdolvpjbwxrgvuqw",
     },
+    
   });
   let mailOptions = {
     from: data.email,
     to: "Cody Askew",
     subject: `message from ${data.name}`,
     html: `
-            <h3>Informations<h3/>
+            <h3>Information<h3/>
             <ul>
             <li>Name: ${data.name}<li/>
             <li>Email: ${data.email}<li/>
@@ -34,7 +35,7 @@ router.post("/contact", (req, res) => {
             `,
   };
 
-  smtpTransporter.sendMail(mailOptions, (error) => {
+  Transporter.sendMail(mailOptions, (error) => {
     try {
       if (error)
         return res.status(400).json({ msg: "Please Fill All The Fields!" });

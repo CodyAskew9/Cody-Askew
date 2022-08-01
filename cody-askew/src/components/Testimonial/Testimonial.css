@@ -46,11 +46,11 @@
 }
 .testimonial-section .testi-item p .fa-quote-left {
   margin-right: 5px;
-  color: tomato;
+  color: #1e0283;
 }
 .testimonial-section .testi-item p .fa-quote-right {
   margin-left: 5px;
-  color: tomato;
+  color: #1e0283;
 }
 
 .testimonial-section .testi-comment .stars {
@@ -62,7 +62,7 @@
 }
 .testimonial-section .testi-comment .stars li i {
   font-size: 13px;
-  color: tomato;
+  color: #1e0283;
 }
 .testimonial-section .client-info {
   position: relative;

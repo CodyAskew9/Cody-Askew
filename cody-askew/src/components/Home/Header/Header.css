@@ -36,7 +36,7 @@ header-option-separator{
     color: white;
 }
 .selected-header-option{
-    color: #ff5823;
+    color: #1e0283;
 }
 @media only screen and (max-width: 1110px){
     .header-parent{

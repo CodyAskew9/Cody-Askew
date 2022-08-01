@@ -98,7 +98,7 @@
     height: 15px;
     width: 15px;
     top:5px;
-    background-color: darkorange;
+    background-color: #1e0283;
 }
 .resume-sub-heading{
     position: relative;
@@ -114,7 +114,7 @@
 
 }
 .heading-date{
-    background-color: darkorange;
+    background-color: d#1e0283;
     padding: 4px 12px;
     font-size: 14px;
     border-radius: 14px;
@@ -137,7 +137,7 @@
     position: relative;
     height: 15px;
     width: 70%;
-    background-color: darkorange;
+    background-color: #1e0283;
 }
 .skill-percentage .active-percentage{
     height: 15px;
@@ -148,7 +148,7 @@
 .skill-parent span{
     font-family: "Poppins Simibold";
     font-size: 16px;
-    color: darkorange;
+    color: #1e0283;
 }
 @media only screen and (max-width: 1110px){
     .resume-card{
