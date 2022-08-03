@@ -21,13 +21,17 @@
     flex-grow: 1;
     width: 600px;
     overflow: hidden;
-    padding: 0 0 0 70px;
+    padding: 0 0 0 80px;
 }
+
 .experience-description{
-    margin: 10px 0;
+    margin: 10px 0 15px 0;
     text-align: justify;
     max-width: 100%;
 }
+.resume-description-text {
+    font-size: 12px;
+  }
 .resume-details-carousal{
     transition: transform 1s ease-out;
 
@@ -92,6 +96,14 @@
     display: flex;
     justify-content: space-between;
 }
+.resume-main-heading span {
+    color: #1e0283;
+    font-size: 16px;
+    font-family: "Poppins SemiBold";
+  }
+  .experience-description {
+    max-width: 100%;
+  }
 .heading-bullet{
     position: absolute;
     left: -30px;
@@ -101,20 +113,18 @@
     background-color: #1e0283;
 }
 .resume-sub-heading{
-    position: relative;
     font-size: 14px;
-    font-family: "Poppins Simibold";
+    font-family: "Poppins bold";
     color: #111;
     margin: 10px 0 0 0;
 }
 .resume-heading-description{
     font-size: 12px;
     text-align: justify;
-    position:relative;
 
 }
 .heading-date{
-    background-color: d#1e0283;
+    background-color: #1e0283;
     padding: 4px 12px;
     font-size: 14px;
     border-radius: 14px;
@@ -126,7 +136,7 @@
     position: relative;
     width: 50%;
 }
-.programming-skill-container{
+.programming-skills-container{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -152,7 +162,7 @@
 }
 @media only screen and (max-width: 1110px){
     .resume-card{
-        width: 800px;
+        width: 880px;
     }
     .resume-bullets-details{
         padding: 0 0 0 70px;
@@ -190,5 +200,23 @@
         
     }
     
-
+.programming-skills-container{
+    width: 100%;
+    height: fit-content;
+    margin: 5px 0 0 0;
+}
+.experience-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 90px;
+    width: 100%;
+    height: fit-content;
+    padding: 0;
+}
+.experience-description {
+    height: fit-content;
+    max-width: 100%;
+  }
 }

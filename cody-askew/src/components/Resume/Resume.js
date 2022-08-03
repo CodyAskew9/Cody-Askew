@@ -95,6 +95,7 @@ const resumeDetails = [
         />
     </div>,
     <div className='resume-screen-container' key="work-experience">
+        <div className="experience-container">
         <ResumeHeading 
         heading={"Albuquerque NFC"}
         subHeading={"Owner Operator"}
@@ -126,6 +127,8 @@ const resumeDetails = [
             Coached sales associates in product specifications, sales incentives and selling techniques, significantly increasing customer satisfaction ratings
 Responded to internet inquiries and phone calls in a timely manner
             </span>
+            <br />
+            </div>
             </div>
         </div>,
 
