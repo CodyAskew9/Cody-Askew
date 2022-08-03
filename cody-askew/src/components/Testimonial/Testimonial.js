@@ -91,7 +91,7 @@ export default function Testimonial(props) {
                 </div>
               </div>
 
-              <div className="col-lg-12">
+              {/* <div className="col-lg-12">
                 <div className="testi-item">
                   <div className="testi-comment">
                     <p>
@@ -193,7 +193,7 @@ export default function Testimonial(props) {
                     <p>Banker</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </OwlCarousel>
           </div>
         </div>
