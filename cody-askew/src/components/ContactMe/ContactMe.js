@@ -41,21 +41,13 @@ export default function ContactUs(props) {
       cursor={false}
       sequence={["Get In Touch 📧", 1000, ""]} />
           </h2>{" "}
-          <a href="">
-            <i className="fa fa-facebook-square" />
+          <a href="https://github.com/CodyAskew9">
+            <i className="fa fa-github-square" />
           </a>
-          <a href="#">
-            <i className="fa fa-google-plus-square" />
+          <a href="https://www.linkedin.com/in/codyaskew/">
+            <i className="fa fa-linkedin-square" />
           </a>
-          <a href="">
-            <i className="fa fa-instagram" />
-          </a>
-          <a href="">
-            <i className="fa fa-youtube-square" />
-          </a>
-          <a href="">
-            <i className="fa fa-twitter" />
-          </a>
+         
         </div>
         <div className="back-form">
           <div className="img-back">

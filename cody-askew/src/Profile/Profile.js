@@ -14,17 +14,9 @@ export default function Profile() {
             <a href="https://github.com/CodyAskew9">
               <i className="fa fa-github-square"></i>
             </a>
-            <a href="#">
-              <i className="fa fa-google-pluse-square"></i>
-            </a>
+            
             <a href="https://www.linkedin.com/in/codyaskew/">
               <i className="fa fa-linkedin-square"></i>
-            </a>
-            <a href="#">
-              <i className="fa fa-youtube-square"></i>
-            </a>
-            <a href="#">
-              <i className="fa fa-twitter"></i>
             </a>
               </div>
           </div>
