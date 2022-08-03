@@ -118,7 +118,7 @@ const resumeDetails = [
             </span>
             <br/>
         <ResumeHeading 
-        heading={"VerVarious Auto Dealerships"}
+        heading={"Various Auto Dealerships"}
         subHeading={"Internet Sales"}
         fromDate={"2012"}
         toDate={"2015"}
