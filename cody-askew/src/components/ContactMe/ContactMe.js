@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Typical from "react-typical";
-import axios from "axios";
+import emailjs from '@emailjs/browser';
 
 
 import imgBack from "../../../src/images/mailz.jpeg";
-import load1 from "../../../src/images/load2.gif";
 import ScreenHeading from "../../utilitys/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilitys/scrollService";
 import Animations from "../../utilitys/Animations";
 import Footer from "../../components/Footer/Footer";
 import "./ContactMe.css";
 
-export default function ContactMe(props) {
+export default function ContactUs(props) {
   let fadeInScreenHandler = (screen) => {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
@@ -20,47 +19,18 @@ export default function ContactMe(props) {
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [banner, setBanner] = useState("");
-  const [bool, setBool] = useState(false);
+    const form = useRef();
 
-  const handleName = (e) => {
-    setName(e.target.value);
-  };
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-  };
-  const handleMessage = (e) => {
-    setMessage(e.target.value);
-  };
-  console.log(name);
-  const submitForm = async (e) => {
-    e.preventDefault();
-    try {
-      let data = {
-        name,
-        email,
-        message,
-      };
-      setBool(true);
-      const res = await axios.post(`/contact`, data);
-      if (name.length === 0 || email.length === 0 || message.length === 0) {
-        setBanner(res.data.msg);
-        setBool(false);
-      } else if (res.status === 200) {
-        setBanner(res.data.msg);
-        setBool(false);
-        setName("");
-        setEmail("");
-        setMessage("");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_k1ml1d9', 'template_rn12bfn', form.current, 'YnbD-qGep0doQ6e3no')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
   return (
     <div className="main-container fade-in" id={props.id || ""}>
       <ScreenHeading subHeading={"Lets Keep In Touch"} title={"Contact Me"} />
@@ -90,28 +60,22 @@ export default function ContactMe(props) {
             <h4>Send Your Email Here!</h4>
             <img src={imgBack} alt="image not found" />
           </div>
-          <form onSubmit={submitForm}>
-            <p>{banner}</p>
+          <form ref={form} onSubmit={sendEmail}>
+
             <label htmlFor="name">Name</label>
-            <input type="text" onChange={handleName} value={name} />
+            <input type="text"  name={"user_name"} />
 
             <label htmlFor="email">Email</label>
-            <input type="email" onChange={handleEmail} value={email} />
+            <input type="email" name={"user_email"} />
 
             <label htmlFor="message">Message</label>
-            <textarea type="text" onChange={handleMessage} value={message} />
+            <textarea type="text"  />
 
             <div className="send-btn">
-              <button type="submit">
+              <button type="submit" value="send">
                 send
                 <i className="fa fa-paper-plane" />
-                {bool ? (
-                  <b className="load">
-                    <img src={load1} alt="image not responding" />
-                  </b>
-                ) : (
-                  ""
-                )}
+                 
               </button>
             </div>
           </form>
