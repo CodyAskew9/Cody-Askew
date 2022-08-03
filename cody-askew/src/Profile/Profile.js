@@ -1,5 +1,5 @@
 import React from "react";
-import Typical from "react-typical";
+import TypeAnimation from 'react-type-animation';
 import "./Profile.css"
 import ScrollService from "../utilitys/scrollService";
 
@@ -39,8 +39,9 @@ export default function Profile() {
                   {""}
                   <h1>
                       {" "}
-                      <Typical loop={Infinity}
-                      steps={[
+                      <TypeAnimation
+      cursor={false}
+      sequence={ [
                           "Ambitious Dev 📈",
                           1000,
                           "Full Stack Developer ✅",

@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import Typical from "react-typical";
+import React, { useRef } from "react";
+import TypeAnimation from 'react-type-animation';
 import emailjs from '@emailjs/browser';
 
 
@@ -24,7 +24,7 @@ export default function ContactUs(props) {
     const sendEmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm('service_k1ml1d9', 'template_rn12bfn', form.current, 'YnbD-qGep0doQ6e3no')
+      emailjs.sendForm('service_k1ml1d9', 'template_rn12bfn', form.current, "nbD-qGep0doQ6e3no")
         .then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -37,7 +37,9 @@ export default function ContactUs(props) {
       <div className="central-form">
         <div className="col">
           <h2 className="title">
-            <Typical loop={Infinity} steps={["Get In Touch 📧", 1000]} />
+          <TypeAnimation
+      cursor={false}
+      sequence={["Get In Touch 📧", 1000, ""]} />
           </h2>{" "}
           <a href="">
             <i className="fa fa-facebook-square" />
@@ -69,7 +71,7 @@ export default function ContactUs(props) {
             <input type="email" name={"user_email"} />
 
             <label htmlFor="message">Message</label>
-            <textarea type="text"  />
+            <textarea  name="message"  />
 
             <div className="send-btn">
               <button type="submit" value="send">
